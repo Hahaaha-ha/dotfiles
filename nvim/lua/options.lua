@@ -35,12 +35,22 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 -- keybindings
 local opt = { noremap = true, silent = true }
 vim.g.mapleader = " "
-vim.keymap.set("n", "<C-l>", "<C-w>l", opt)
-vim.keymap.set("n", "<C-h>", "<C-w>h", opt)
-vim.keymap.set("n", "<C-j>", "<C-w>j", opt)
+vim.keymap.set("n", "<a-l>", "<C-w>l", opt)
+vim.keymap.set("n", "<a-h>", "<C-w>h", opt)
+vim.keymap.set("n", "<a-j>", "<C-w>j", opt)
+vim.keymap.set("n", "<a-k>", "<C-w>k", opt)
+vim.keymap.set("n", "<A-o>", "2<C-w>-", opt)
+vim.keymap.set("n", "<A-p>", "2<C-w>+", opt)
+vim.keymap.set("n", "<A-.>", "<C-w>2>", opt)
+vim.keymap.set("n", "<A-,>", "<C-w>2<", opt)
 vim.keymap.set("n", "<C-k>", "<C-w>k", opt)
 vim.keymap.set("n", "<Leader>v", "<C-w>v", opt)
 vim.keymap.set("n", "<Leader>s", "<C-w>s", opt)
+vim.keymap.set("i", "jk", "<Esc>", opt)
+
+
+
+vim.keymap.set("n", "so", ":% source<CR>", opt)
 
 
 
